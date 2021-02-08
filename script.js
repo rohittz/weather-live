@@ -20,7 +20,7 @@ const updated = (data) =>{
 	let temperature = data.main.temp;
 	let icon = data.weather[0].icon;
 	let main = data.weather[0].main;
-	currentCity = data.name;
+	currentCity = data.name || "Unknown location";
 	document.getElementById("location").innerText = currentCity;
 	document.getElementById("temperature").innerText = temperature;
 	document.getElementById("sky").innerText = main;
